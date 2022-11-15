@@ -55,6 +55,8 @@ const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 function BottomTabNavigator() {
   const colorScheme = useColorScheme();
+  const image = { uri: "https://www.upn.edu.co/wp-content/uploads/2022/03/Tarjeta_blue.png" };
+
 
   return (
     <BottomTab.Navigator
@@ -66,7 +68,8 @@ function BottomTabNavigator() {
         name="TabOne"
         component={TabOneScreen}
         options={({ navigation }: RootTabScreenProps<'TabOne'>) => ({
-          title: 'Inicio',
+          title: 'SeñasAPP',
+          
           tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
           headerRight: () => (
             <Pressable
