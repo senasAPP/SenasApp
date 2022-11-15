@@ -1,34 +1,63 @@
-import { StyleSheet,TouchableOpacity} from 'react-native';
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, View, Button, TextInput } from 'react-native';
+import * as Speech from 'expo-speech';
+import React from 'react';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View , } from '../components/Themed';
-import { Button,  SafeAreaView, Alert } from 'react-native';
+export default function App() {
+  const [name, setName] = React.useState("");
 
+  const listAllVoiceOptions = async () => {
+    let voices = await Speech.getAvailableVoicesAsync();
+    console.log(voices);
+  };
 
-import React, { Component } from 'react'
+  //React.useEffect(listAllVoiceOptions);
 
-export default function TabHablalo() {
+  const speakGreeting = () => {
+      const greeting = 'Hola ,  yo soy Ever';
+      
+      //const greeting = '${name}';
+      const options = {
+        voice: "com.apple.speech.synthesis.voice.Fred",
+        pitch: .5,
+        rate: 0.7
+      };
+      Speech.speak(greeting, options)
+  };
+
+  const speakFree = () => {
+    const greeting = `${name}`;
+    const options = {
+      voice: "com.apple.speech.synthesis.voice.Fred",
+      pitch: .5,
+      rate: 0.7
+    };
+    Speech.speak(greeting, options)
+};
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Hablalo</Text>
+      <TextInput style={styles.input} onChangeText={setName} value={name} />
+      <Button title="Hablalo!" onPress={speakFree} />
+
+      <Button title="Yo soy" onPress={speakGreeting} />
+      <StatusBar style="auto" />
     </View>
-    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
-  },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
-  },
+  input: {
+    alignSelf: 'stretch',
+    height: 20,
+    borderBottomWidth: 2,
+    borderBottomColor: "red",
+    margin: 8
+  }
 });
