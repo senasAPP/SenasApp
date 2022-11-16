@@ -14,7 +14,7 @@ export default function App() {
   //React.useEffect(listAllVoiceOptions);
 
   const speakGreeting = () => {
-      const greeting = 'Hola ,  yo soy Ever';
+      const greeting = 'Hola ,  yo soy Ever y tengo una discapacidad auditiva, me comunicare haciendo uso de esta aplicacion';
       
       //const greeting = '${name}';
       const options = {
