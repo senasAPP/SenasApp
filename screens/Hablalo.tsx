@@ -1,6 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Button, TextInput } from 'react-native';
 import * as Speech from 'expo-speech';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import React from 'react';
 
 export default function App() {
@@ -41,9 +42,11 @@ export default function App() {
       <Button title="Hablalo!" onPress={speakFree} />
 
       <Button title="Yo soy" onPress={speakGreeting} />
+      
       <StatusBar style="auto" />
     </View>
   );
+
 }
 
 const styles = StyleSheet.create({

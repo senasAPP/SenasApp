@@ -17,6 +17,7 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import Hablalo from '../screens/Hablalo';
+import Microfono from '../screens/Microfono'
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
 
@@ -100,6 +101,14 @@ function BottomTabNavigator() {
         component={Hablalo}
         options={{
           title: 'Hablalo',
+          tabBarIcon: ({ color }) => <AntDesign name="meho" size={24} color="black" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Microfono"
+        component={Microfono}
+        options={{
+          title: 'Microfono',
           tabBarIcon: ({ color }) => <AntDesign name="meho" size={24} color="black" />,
         }}
       />

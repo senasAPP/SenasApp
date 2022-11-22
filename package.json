@@ -30,15 +30,18 @@
     "expo-web-browser": "~11.0.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
+    "react-hook-speech-to-text": "^0.8.0",
     "react-native": "0.69.6",
     "react-native-safe-area-context": "4.3.1",
     "react-native-screens": "~3.15.0",
-    "react-native-web": "~0.18.7"
+    "react-native-web": "~0.18.7",
+    "react-speech-recognition": "^3.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.69.1",
+    "@types/react-speech-recognition": "^3.9.0",
     "jest": "^26.6.3",
     "jest-expo": "~44.0.1",
     "react-test-renderer": "18.0.0",
