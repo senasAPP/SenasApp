@@ -5178,6 +5178,11 @@
     "commander" "2.20.0"
     "update-check" "1.5.3"
 
+"expo-speech@~10.3.0":
+  "integrity" "sha512-/DCSga6fmDAzMoTwGiAkexCFjCjnxfQQU2gNY+NEI74n8b8pZiBckgsEhA1WzGuPYWy56u2xoRvbzmLGWSraMw=="
+  "resolved" "https://registry.npmjs.org/expo-speech/-/expo-speech-10.3.0.tgz"
+  "version" "10.3.0"
+
 "expo-splash-screen@~0.16.2":
   "integrity" "sha512-AHSRyGwu58WNt8shW5g/4cQ9e9IzUwNTC/WGWxshHCwgbWIJmHLvK3+D45MTmzGWteOoTI8oV7KSQKBNJSTiyw=="
   "resolved" "https://registry.npmjs.org/expo-splash-screen/-/expo-splash-screen-0.16.2.tgz"
@@ -10062,6 +10067,8 @@
     "loose-envify" "^1.1.0"
 
 "react@17.0.2":
+  "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
+  "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"
   dependencies:
     "loose-envify" "^1.1.0"

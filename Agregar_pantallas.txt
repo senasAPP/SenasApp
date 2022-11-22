@@ -1,0 +1,19 @@
+#Hecha por Ever
+Que onda, este archivo es un instructivo para crear pantallas porque la verdad se me olvido y que hueva pasar media hora para volver a 
+recordar como se hacia.
+
+1. Agregaras un nuevo archivo a la carpeta de Screens (puede ser de tipo js,tpx,jsx), esta sera tu nueva pantalla (asegurate que renderice)
+2. Abrir el archivo types.tsx y agregar la referencia de nuestra nueva pantalla en:
+    export type RootTabParamList
+3. Abrir la carpeta navigation -> index.tsx e importar nuestra pantalla, algo asi: 
+    import TabTwoScreen from '../screens/TabTwoScreen';
+4. Aqui puedes cargarlo en lo que quieras (tabs, botones que abran la pantalla),en caso de bottom tab hacer esto:
+    <BottomTab.Screen
+        name="TabHablalo"
+        component={Hablalo}
+        options={{
+          title: 'Hablalo',
+          tabBarIcon: ({ color }) => <AntDesign name="meho" size={24} color="black" />,
+        }}
+      />
+5. Listo, pantalla funcional.
