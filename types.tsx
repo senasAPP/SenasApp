@@ -28,7 +28,7 @@ export type RootTabParamList = {
   TabOne: undefined;
   TabTwo: undefined;
   TabHablalo : undefined;
-  Microfono : undefined;
+  Video : undefined;
 };
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> = CompositeScreenProps<

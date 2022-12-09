@@ -4,6 +4,7 @@ import * as Speech from 'expo-speech';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
 import React from 'react';
 
+
 export default function App() {
   const [name, setName] = React.useState("");
 
@@ -47,6 +48,7 @@ export default function App() {
     </View>
   );
 
+
 }
 
 const styles = StyleSheet.create({
@@ -62,5 +64,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 2,
     borderBottomColor: "red",
     margin: 8
-  }
+  },
+  backgroundVideo: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    right: 0,
+  },
 });
