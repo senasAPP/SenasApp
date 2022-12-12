@@ -18,7 +18,7 @@ export default function TabTwoScreen() {
   }, []);
 
   const startSpeechToText = async () => {
-    await Voice.start('en-NZ');
+    await Voice.start("es-CO");
     setStarted(true);
   };
 
@@ -37,16 +37,10 @@ export default function TabTwoScreen() {
 
   return (
     <View style={styles.container}>
-      {!started ? (
-        <Button title='Start Speech to Text' onPress={startSpeechToText} />
-      ) : undefined}
-      {started ? (
-        <Button title='Stop Speech to Text' onPress={stopSpeechToText} />
-      ) : undefined}
-      {results.map((result, index) => (
-        <Text key={index}>{result}</Text>
-      ))}
-      <StatusBar style='auto' />
+      {!started ? <Button title='Start Speech to Text' onPress={startSpeechToText} /> : undefined}
+      {started ? <Button title='Stop Speech to Text' onPress={stopSpeechToText} /> : undefined}
+      {results.map((result, index) => (<Text key={index}>{result}</Text>))}
+      <StatusBar style="auto" />
     </View>
   );
 }
@@ -57,5 +51,4 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-});
+  }});
