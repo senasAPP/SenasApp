@@ -17,8 +17,10 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 import Hablalo from '../screens/Hablalo';
+import Video from '../screens/Video';
 import { RootStackParamList, RootTabParamList, RootTabScreenProps } from '../types';
 import LinkingConfiguration from './LinkingConfiguration';
+import App from '../App';
 
 
 
@@ -103,7 +105,15 @@ function BottomTabNavigator() {
         component={Hablalo}
         options={{
           title: 'Hablalo',
-          tabBarIcon: ({ color }) => <AntDesign name="meho" size={24} color="black" />,
+          tabBarIcon: ({ color }) => <AntDesign name="notification" size={24} color="black" />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Video"
+        component={Video}
+        options={{
+          title: 'Video',
+          tabBarIcon: ({ color }) => <AntDesign name="playcircleo" size={24} color="black" />,
         }}
       />
     </BottomTab.Navigator>
